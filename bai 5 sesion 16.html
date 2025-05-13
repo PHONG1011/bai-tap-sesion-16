@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kiểm tra chuỗi đối xứng</title>
+</head>
+<body>
+  <script>
+    // Hàm kiểm tra chuỗi đối xứng
+    function isPalindrome(str) {
+      // Loại bỏ khoảng trắng và chuyển chuỗi về chữ thường
+      str = str.replace(/\s+/g, "").toLowerCase();
+      // Đảo ngược chuỗi
+      let reversedStr = str.split("").reverse().join("");
+      // So sánh chuỗi gốc và chuỗi đảo ngược
+      return str === reversedStr;
+    }
+
+    // Nhập chuỗi từ người dùng
+    let inputString = prompt("Nhập một chuỗi để kiểm tra:");
+
+    // Kiểm tra và thông báo kết quả
+    if (isPalindrome(inputString)) {
+      alert(`Chuỗi "${inputString}" là chuỗi đối xứng.`);
+    } else {
+      alert(`Chuỗi "${inputString}" không phải là chuỗi đối xứng.`);
+    }
+  </script>
+</body>
+</html>
